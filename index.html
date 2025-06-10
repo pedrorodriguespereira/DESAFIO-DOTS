@@ -1,0 +1,130 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Dot Memories</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff8f0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background-color: #ffafcc;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff88bb;
+    }
+
+    #desafio {
+      margin-top: 30px;
+      font-size: 1.2em;
+      padding: 20px;
+      background-color: #e0ffe0;
+      border-radius: 12px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎉 Descobre o teu Desafio!</h1>
+    <p>Clica no botão e vê o teu desafio.<br>Depois partilha o momento na app Dot Memories!</p>
+    <button id="btnDesafio">Receber Desafio</button>
+    <div id="desafio"></div>
+  </div>
+
+  <script>
+    var desafios = [
+      "🎥 Conta como conheces os noivos, mas inventa a história!",
+      "📸 Faz uma pose de passarela com uma mini na mão.",
+      "🕺 Cria uma dança para a Benedita e grava.",
+      "📷 Fotografa um momento de ternura entre convidados.",
+      "📸 Tira uma selfie com alguém que não conheces.",
+      "🎬 Faz uma declaração de amor aos noivos em vídeo.",
+      "🎥 Imita o choro da Benedita… com convicção!",
+      "📷 Encontra a pessoa com o sorriso mais bonito e fotografa.",
+      "🎬 Faz um brinde criativo à nova família.",
+      "🎨 Desenha a Benedita… com os olhos fechados!",
+      "📸 Põe um acessório ao acaso e tira uma foto de "moda".",
+      "🎬 Finge que estás a dar uma entrevista para a TV sobre este dia.",
+      "📷 Faz uma foto com alguém de cada geração.",
+      "📸 Junta 3 pessoas com nomes começados por "M" e tira uma foto.",
+      "🎬 Faz uma previsão do futuro dos noivos… em 10 segundos.",
+      "🎥 Canta os parabéns à Benedita em estilo ópera.",
+      "📸 Faz uma careta e desafia outro a superar.",
+      "🎬 Mostra o teu melhor passo de dança dos anos 80.",
+      "📷 Tira uma foto do cantinho mais bonito do espaço.",
+      "🎥 Consegue um vídeo com um "Sim!" coletivo dos teus amigos.",
+      "📸 Tira uma selfie com o maior número de pessoas que conseguires.",
+      "📸 Recria uma pose de casal de um filme famoso.",
+      "🎥 Faz um brinde original…",
+      "📸 Encontra alguém com um acessório engraçado e faz uma foto juntos.",
+      "📸 Faz um retrato criativo da Benedita (em desenho, comida ou expressão corporal).",
+      "🎥 Faz um vídeo a imitar um animal e convence outro convidado a fazer também.",
+      "📸 Faz uma "passagem de modelos" improvisada com guardanapos ou fitas.",
+      "🎥 Dança uma música infantil com uma criança e grava o momento.",
+      "📸 Faz uma "selfie séria" com o maior número de pessoas a rir atrás.",
+      "📸 Tira uma foto artística com sombras e luzes da natureza.",
+      "📸 Desenha a Benedita num guardanapo e mostra o resultado em vídeo.",
+      "🎥 Imita um cantor famoso e faz um mini concerto.",
+      "📸 Encontra alguém com o mesmo nome que tu (ou parecido) e tirem uma selfie.",
+      "📸 Tira uma foto a um sapato perdido (fingido ou verdadeiro!).",
+      "🎥 Faz uma corrida de colher e ovo (ou algo parecido) e filma.",
+      "🎥 Faz uma coreografia em grupo com pelo menos 3 pessoas.",
+      "📸 Fotografa uma gargalhada verdadeira (vale espreitar para a apanhar!).",
+      "🎥 Faz um vídeo a dar um "conselho de vida" como se fosses um guru.",
+      "📸 Constrói algo com objetos da festa e fotografa a "obra de arte".",
+      "📸 Tira uma selfie com alguém que acabaste de conhecer.",
+      "📸 Faz uma foto que pareça antiga (preto e branco ou com filtro vintage).",
+      "🎥 Faz um vídeo a saltar no insuflável como se tivesses 5 anos outra vez.",
+      "🎥 Recria uma jogada de futebol "à profissional" e fotografa o momento.",
+      "🎥 Inventa e grava um grito de guerra da festa do batizado/casamento."
+    ];
+
+    document.getElementById("btnDesafio").onclick = function () {
+      var random = Math.floor(Math.random() * desafios.length);
+      var texto = desafios[random];
+      var divDesafio = document.getElementById("desafio");
+      divDesafio.style.display = "block";
+      divDesafio.innerHTML = texto;
+    };
+  </script>
+
+</body>
+</html>
